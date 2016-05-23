@@ -1,0 +1,102 @@
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+}
+
+body header {
+	background: #f7f7f7;
+	height: 70px;
+	border-bottom: 1px solid #ddd;
+}
+
+body header img {
+	position: relative;
+  top: 18px;
+}
+
+body header a {
+	position: relative;
+	top: 25px;
+}
+
+body h1 {
+	font-size: 26px;
+}
+body h3 {
+	font-size: 18px;
+}
+
+.progress-nav {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	background: rgba(92,92,92,1);
+	margin-top: 30px;
+}
+
+.progress-nav li {
+	width: 16.6666%;
+	float: left;
+}
+
+.progress-nav span {
+  font-size: 1.5em;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.progress-nav a {
+	line-height: 48px;
+	color: #fff;
+	height: 48px;
+	background: rgba(92,92,92,1);
+	display: block;
+}
+
+
+
+.progress-nav li:first-child a {
+  background: rgba(0,176,109,1);
+}
+
+.progress-nav a:hover,
+.progress-nav a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.progress-nav a.active {
+	background: rgba(0,176,109,1);
+}
+
+.btn {
+	width:216px;
+	height: 48px;
+	background: rgba(0,176,109,1);
+	border-radius: 4px;
+	color: #fff;
+}
+
+.btn:hover,
+.btn:focus {
+	color: #fff !important;
+	position: relative;
+}
+
+.btn:hover:after {
+	content: "";
+	background: rgba(0,0,0,.1);
+	width: 100%;
+	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+
+.btn.disabled {
+	background: rgba(92,92,92,1);
+}
+
+.content-area {
+    padding: 50px 0;
+}

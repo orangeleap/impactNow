@@ -1,21 +1,24 @@
-<div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+<div class="container">
+    <div class="row">
 
         <div id="form-container">
 
-            <div class="page-header text-center">
-                <h2>Impact 2030</h2>
+            <div class="page-header">
+                <h1>Complete Your IMPACT 2030 Profile</h1>
+                <h3 class="pull-left">You must complete this walkthrough before accessing your account.</h3>
+                <span class="pull-right"><h1>0% Complete</h1></span>
+                <div class="clearfix"></div>
 
                 <!-- the links to our nested states using relative paths -->
                 <!-- add the active class if the state matches our ui-sref -->
-                <div id="status-buttons" class="text-center">
-                    <a ui-sref-active="active" ui-sref=".page1"><span>1</span> Getting Started</a>
-                    <a ui-sref-active="active" ui-sref=".page2"><span>2</span> Donations & Hours</a>
-                    <a ui-sref-active="active" ui-sref=".page3"><span>3</span> Impact Goals</a>
-                    <a ui-sref-active="active" ui-sref=".page4"><span>4</span> Impact Allocation</a>
-                    <a ui-sref-active="active" ui-sref=".page5"><span>5</span> Final Details</a>
-                    <a ui-sref-active="active" ui-sref=".page6"><span>6</span> Confirmation</a>
-                </div>
+                <ul id="status-buttons" class="progress-nav text-center">
+                    <li><a ui-sref-active="active" ui-sref=".page1"><span>1</span> Getting Started</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page2"><span>2</span> Donations &amp; Hours</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page3"><span>3</span> Impact Goals</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page4"><span>4</span> Impact Allocation</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page5"><span>5</span> Final Details</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page6"><span>6</span> Confirmation</a></li>
+                </ul>
             </div>
 
             <!-- use ng-submit to catch the form submission and use our Angular function -->
