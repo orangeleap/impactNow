@@ -10,12 +10,20 @@ namespace OwinSelfhostSample
         public string Name { get; set; }
         public int Num { get; set; }
         public string Text { get; set; }
+        public List<SubCategory> Subs { get; set; }
+
+        public Category()
+        {
+            Subs = new List<SubCategory>();
+        }
 
     }
 
     public class SubCategory
     {
+        public int Num { get; set; }
         public string Text { get; set; }
+        public string HoverText { get; set; }
 
     }
 }
