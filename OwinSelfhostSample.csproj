@@ -105,6 +105,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="CategoryController.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="SponsorController.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ValuesController.cs" />
   </ItemGroup>
