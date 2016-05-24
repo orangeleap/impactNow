@@ -135,6 +135,23 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\Affordable.png" />
+    <Content Include="images\CleanWater.png" />
+    <Content Include="images\ClimateAction.png" />
+    <Content Include="images\DecentWork.jpeg" />
+    <Content Include="images\GenderEquality.png" />
+    <Content Include="images\GoodHealth.png" />
+    <Content Include="images\IndustryInovation.png" />
+    <Content Include="images\LifeBelowWater.png" />
+    <Content Include="images\LifeOnLand.png" />
+    <Content Include="images\NoPoverty.png" />
+    <Content Include="images\Partnerships.png" />
+    <Content Include="images\PeaceAndJustice.png" />
+    <Content Include="images\QualityEducation.png" />
+    <Content Include="images\ReducedInequalities.jpeg" />
+    <Content Include="images\Responsible.png" />
+    <Content Include="images\SustainableCities.png" />
+    <Content Include="images\ZeroHunger.png" />
     <Content Include="js\angular-animate.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
