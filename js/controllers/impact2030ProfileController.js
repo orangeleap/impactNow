@@ -19,8 +19,18 @@ angular.module('app').controller("impact2030ProfileController", [
                     });
 
             };
+
+            function getSponsors() {
+                sustainabilityDevelopmentGoalService.getSponsors().
+                    then(function (response) {
+                        $scope.sponsors = response;
+                    });
+
+            };
+
             
             getCategories();
+            getSponsors();
 
             function init() {
                 function continueToGettingStarted(href) {
