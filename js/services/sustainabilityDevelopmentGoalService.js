@@ -5,7 +5,7 @@ angular.module("app").factory("sustainabilityDevelopmentGoalService", ["$http", 
             var result = $q.defer();
             $http({
                 method: 'GET',
-                url: "/api/sustainabilitydevelopmentgoals"
+                url: "/api/category"
             })
                 .success(function (response) {
                     result.resolve(response);
