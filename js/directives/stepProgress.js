@@ -10,14 +10,16 @@ angular.module("app").directive("stepProgress", function () {
 
             $scope.navigateToStep = function (step, index) {
                 if (step.isActive) {
-                    $scope.currentStepPosition.currentStep = index;
-                    //$state.go(step.href);
+                    $scope.currentStepPosition.currentStep = index;                   
                 }
             }
 
             $scope.$watch("currentStepPosition.currentStep", function (newVal) {
                 if ($scope.stepDefinitions.length >= newVal) {
                     var step = $scope.stepDefinitions[newVal];
+                    if (!step.isActive)
+                        $scope.percentageComplete += step.percent;
+
                     step.isActive = true;
                     step.onContinue(step.href);
                 }
@@ -29,7 +31,8 @@ angular.module("app").directive("stepProgress", function () {
         templateUrl: "/templates/steps.html",
         scope: {
             stepDefinitions: "=",
-            currentStepPosition: "="
+            currentStepPosition: "=",
+            percentageComplete: "="
         },
         controller: controller
     }
