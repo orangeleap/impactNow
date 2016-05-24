@@ -1,7 +1,7 @@
 ﻿"use strict";
 angular.module('app').controller("impact2030ProfileController", [
-    "$scope", "$state", "sustainabilityDevelopmentGoalService",
-        function ($scope, $state, sustainabilityDevelopmentGoalService) {
+    "$scope", "$state",
+        function ($scope, $state) {
             $scope.currentStepPosition = {
                 currentStep: 0
             };

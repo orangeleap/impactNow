@@ -1,18 +1,32 @@
-<div class="content-area">
-    <h3>Donations and Volunteer Hours</h3>
-    <p>Not every organization has both volunteer hours and dollars. Please select the methods of aid most relevant to your organization before continuing.</p>
 
-    <ul>
-        <li>
-            <input type="checkbox" ng-model="profile.receivesDonations"/>
-            <p>My Organization Receives Charitable Donations</p>
-        </li>
-        <li>
-            <input type="checkbox" ng-model="profile.receivesVolunteerHours"/>
-            <p>My Organization Receives Volunteer Hours</p>
-        </li>
-    </ul>
+<style type="text/css">
+    p#helpnote {
+        border-style: solid;
+    }
+</style>
+
+<div class="content-area">
+    <h3>Donations and Volunteer Hours</h3><br />
+    <div class="row">
+        <div class="col-xs-8">
+            <div>
+                Not every organization has both volunteer hours and dollars. Please select the methods of aid most <br />relevant to your organization before continuing. <br /><br />
+                <input type="checkbox" name="donations" ng-model="profile.receivesDonations">My Organization Recieves Charitable Donations.<br>
+                <input type="checkbox" name="vehiscle" ng-model="profile.receivesVolunteerHours">My Organization Receives Volunteer Hours.
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <span class="helpnote">
+                This helps us determine what kind of work your prganization does. As we move forward, you will be answering question about how you allocate donations and hours served. To make sure we are accurately representing your organization's giving and volunteering, we need to confirm your organization receives monetary donations as well as volunteer service.
+            </span>
+        </div>
+    </div>
 </div>
+
+
+
+
+
 <div class="row">
     <hr />
     <button class="btn pull-right" ng-disabled="!profile.receivesDonations && !profile.receivesVolunteerHours" ng-click="moveToNextStep()">Next Step</button>
