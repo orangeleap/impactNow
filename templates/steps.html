@@ -1,0 +1,11 @@
+﻿
+
+<div class="col-sm-12">
+    <ul class="progress-nav text-center">
+        <li ng-repeat="step in stepDefinitions" >            
+            <a href="" ng-class="{'active' : step.isActive}" ng-click="navigateToStep(step, $index)"><span>{{$index + 1}}</span> {{step.name}}</a>              
+        </li>
+    </ul>
+</div>
+
+

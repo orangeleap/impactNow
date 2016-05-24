@@ -10,7 +10,7 @@ angular.module('app', [ 'ui.router'])
             templateUrl: '/templates/profile.html',
             controller: 'impact2030ProfileController'
         })
-        .state('impact2030.getringstarted', {
+        .state('impact2030.gettingstarted', {
             url: '/gettingstarted',
             templateUrl: '/templates/gettingstarted.html'
         })
