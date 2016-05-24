@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+
+        <div id="form-container">
+
+            <div class="page-header">
+                <h1>Complete Your IMPACT 2030 Profile</h1>
+                <h3 class="pull-left">You must complete this walkthrough before accessing your account.</h3>
+                <span class="pull-right"><h1>0% Complete</h1></span>
+                <div class="clearfix"></div>
+
+                <!-- the links to our nested states using relative paths -->
+                <!-- add the active class if the state matches our ui-sref -->
+                <ul id="status-buttons" class="progress-nav text-center">
+                    <li><a ui-sref-active="active" ui-sref=".page1"><span>1</span> Getting Started</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page2"><span>2</span> Donations &amp; Hours</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page3"><span>3</span> Impact Goals</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page4"><span>4</span> Impact Allocation</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page5"><span>5</span> Final Details</a></li>
+                    <li><a ui-sref-active="active" ui-sref=".page6"><span>6</span> Confirmation</a></li>
+                </ul>
+            </div>
+
+            <!-- use ng-submit to catch the form submission and use our Angular function -->
+            <form id="signup-form" ng-submit="processForm()">
+
+                <!-- our nested state views will be injected here -->
+                <div id="form-views" ui-view></div>
+            </form>
+
+        </div>
+
+
+    </div>
+</div>
