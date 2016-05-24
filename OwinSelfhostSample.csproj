@@ -132,7 +132,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="js\controllers\" />
     <Folder Include="js\directives\" />
     <Folder Include="js\services\" />
     <Folder Include="Properties\" />
@@ -150,25 +149,28 @@
     <Content Include="index.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="main.html">
+    <Content Include="js\controllers\impact2030ProfileController.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="page1.html">
+    <Content Include="templates\profile.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="page2.html">
+    <Content Include="templates\gettingstarted.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="page3.html">
+    <Content Include="templates\donationsandhours.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="page4.html">
+    <Content Include="templates\impactgoals.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="page5.html">
+    <Content Include="templates\impactallocation.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="page6.html">
+    <Content Include="templates\finaldetails.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\confirmation.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="style.css">

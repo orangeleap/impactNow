@@ -1,42 +1,43 @@
-angular.module('formApp', [ 'ui.router'])
+angular.module('app', [ 'ui.router'])
 
 // configuring our routes 
 // =============================================================================
 .config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-        .state('Impact2030', {
-            templateUrl: 'main.html',
-            controller: 'mainController'
+        .state('impact2030', {
+            url: '/impact2030',
+            templateUrl: '/templates/profile.html',
+            controller: 'impact2030ProfileController'
         })
-        .state('Impact2030.page1', {
-            url: '/page1',
-            templateUrl: 'page1.html'
+        .state('impact2030.getringstarted', {
+            url: '/gettingstarted',
+            templateUrl: '/templates/gettingstarted.html'
         })
-        .state('Impact2030.page2', {
-            url: '/page2',
-            templateUrl: 'page2.html'
+        .state('impact2030.donationsandhours', {
+            url: '/donationsandhours',
+            templateUrl: '/templates/donationsandhours.html'
         })
-        .state('Impact2030.page3', {
-            url: '/page3',
-            templateUrl: 'page3.html'
+        .state('impact2030.impactgoals', {
+            url: '/impactgoals',
+            templateUrl: '/templates/impactgoals.html'
         })
-        .state('Impact2030.page4', {
-            url: '/page4',
-            templateUrl: 'page4.html'
+        .state('impact2030.impactallocation', {
+            url: '/impactallocation',
+            templateUrl: '/templates/impactallocation.html'
         })
-        .state('Impact2030.page5', {
-            url: '/page5',
-            templateUrl: 'page5.html'
+        .state('impact2030.finaldetails', {
+            url: '/finaldetails',
+            templateUrl: '/templates/finaldetails.html'
         })
-        .state('Impact2030.page6', {
-            url: '/page6',
-            templateUrl: 'page6.html'
+        .state('impact2030.confirmation', {
+            url: '/confirmation',
+            templateUrl: '/templates/confirmation.html'
         });
 
     // catch all route
     // send users to the form page 
-    $urlRouterProvider.otherwise('/page1');
+    $urlRouterProvider.otherwise('/impact2030/gettingstarted');
 })
 
 // our controller for the form
