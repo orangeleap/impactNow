@@ -9,7 +9,29 @@ angular.module('app').controller("impact2030ProfileController", [
             $scope.profile = {
                 percentageComplete: 0,
                 receivesDonations: false,
-                receivesVolunteerHours: false
+                receivesVolunteerHours: false,
+                selectedSDGs: []
+            };
+
+            $scope.formatSDG = function(sdg) {
+                return "#" + sdg.num + " " + sdg.name;
+            };
+
+            $scope.removeSelectedSDG = function(sdg) {
+                var idx = $scope.profile.selectedSDGs.findIndex(function(s) {
+                    return s.num === sdg.num;
+                });
+                $scope.profile.selectedSDGs.splice(idx, 1);
+            };
+
+            $scope.selectSDG = function(sdg) {
+                var foundSDG = $scope.profile.selectedSDGs.find(function(s) {
+                    return s.num === sdg.num;
+                });
+
+                if (!foundSDG) {
+                    $scope.profile.selectedSDGs.push(sdg);
+                }
             };
 
             function getCategories() {
@@ -17,7 +39,6 @@ angular.module('app').controller("impact2030ProfileController", [
                     then(function (response) {
                         $scope.sdgs = response;
                     });
-
             };
 
             function getSponsors() {
@@ -25,7 +46,6 @@ angular.module('app').controller("impact2030ProfileController", [
                     then(function (response) {
                         $scope.sponsors = response;
                     });
-
             };
 
             

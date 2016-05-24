@@ -7,8 +7,23 @@
                 Goal to your profile, you need to select all the sub-targets ("categories") that apply to the work you do. Once you <br>
                 have selected your goals, you can proceed to the next step where you will tell us how invloved you are in each area. <br><br>
             </span><br><br>
-            </div>
         </div>
+    </div>
+    <div class="row">
+        <h4>Your Have Selected the Following SDG's</h4>
+        <ul>
+            <li ng-repeat="sdg in profile.selectedSDGs">
+                {{formatSDG(sdg)}}<a href="" ng-click="removeSelectedSDG(sdg)">Remove</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <ul>
+            <li ng-repeat="sdg in sdgs">
+                <a ng-click="selectSDG(sdg)"><img ng-src="sdg.imageUrl" alt="{{sdg.name}}"/></a>
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="row">
     <hr />
