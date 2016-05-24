@@ -1,0 +1,95 @@
+﻿"use strict";
+angular.module('app').controller("impact2030ProfileController", [
+    "$scope", "$state", "sustainabilityDevelopmentGoalService",
+        function ($scope, $state, sustainabilityDevelopmentGoalService) {
+            $scope.currentStepPosition = {
+                currentStep: 0
+            };
+
+            $scope.profile = {
+                percentageComplete: 0,
+                receivesDonations: false,
+                receivesVolunteerHours: false
+            };
+            
+
+            function init() {
+                function continueToGettingStarted(href) {
+                    $state.go(href);
+                };
+
+                function continueToDonationsAndHours(href) {
+                    $state.go(href);
+                };
+
+                function continueToImpactGoals(href) {
+                    //sustainabilityDevelopmentGoalService.getSDGs().then(function(response) {
+
+                    //}, function(error) {
+
+                    //});
+                    $state.go(href);
+                };
+
+                function continueToImpactAllocation(href) {
+                    $state.go(href);
+                };
+
+                function continueToFinalDetails(href) {
+                    $state.go(href);
+                };
+
+                function continueToConfirmation(href) {
+                    $state.go(href);
+                };
+
+                
+
+                $scope.stepDefinitions = [
+                    {
+                        name: ' Getting Started',
+                        href: 'impact2030.gettingstarted',
+                        percent: 0,
+                        onContinue: continueToGettingStarted
+                    },
+                    {
+                        name: ' Donations & Hours',
+                        href: 'impact2030.donationsandhours',
+                        percent: 20,
+                        onContinue: continueToDonationsAndHours
+                    },
+                    {
+                        name: ' Impact Goals',
+                        href: 'impact2030.impactgoals',
+                        percent: 20,
+                        onContinue: continueToImpactGoals
+                    },
+                    {
+                        name: ' Impact Allocation',
+                        href: 'impact2030.impactallocation',
+                        percent: 20,
+                        onContinue: continueToImpactAllocation
+                    },
+                    {
+                        name: ' Final Details',
+                        href: 'impact2030.finaldetails',
+                        percent: 20,
+                        onContinue: continueToFinalDetails
+                    },
+                    {
+                        name: ' Confirmation',
+                        href: 'impact2030.confirmation',
+                        percent: 20,
+                        onContinue: continueToConfirmation
+                    }
+                ];
+
+                $scope.moveToNextStep = function () {
+                    $scope.currentStepPosition.currentStep++;
+                };
+
+            };
+
+            init();
+        }
+]);
