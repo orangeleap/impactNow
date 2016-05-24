@@ -10,13 +10,13 @@ namespace OwinSelfhostSample
         public string Name { get; set; }
         public int Num { get; set; }
         public string Text { get; set; }
+        public string ImageUrl { get; set; }
         public List<SubCategory> Subs { get; set; }
 
         public Category()
         {
             Subs = new List<SubCategory>();
         }
-
     }
 
     public class SubCategory
@@ -24,6 +24,6 @@ namespace OwinSelfhostSample
         public int Num { get; set; }
         public string Text { get; set; }
         public string HoverText { get; set; }
-
+        public decimal Percentage { get; set; }
     }
 }
