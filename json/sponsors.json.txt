@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Chevron",
+    "url": "images/chev_1.jpg",
+    "urlAlt": "images/chev_2.jpg"
+  },
+  {
+    "name": "NRG",
+    "url": "images/nrg_1.jpg",
+    "urlAlt": "images/nrg_2.jpg"
+  },
+  {
+    "name": "Ericsson",
+    "url": "images/ericsson_1.jpg",
+    "urlAlt": "images/ericsson_2.jpg"
+  },
+  {
+    "name": "Pfizer",
+    "url": "images/pfizer_1.jpg",
+    "urlAlt": "images/pfizer_2.jpg"
+  }
+]
