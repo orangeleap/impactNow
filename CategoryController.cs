@@ -40,8 +40,10 @@ namespace OwinSelfhostSample
             {
                 Name = "No Poverty",
                 Num = 1,
+                ImageUrl = "images/NoPoverty.png",
                 Text =
                     "End poverty in all its forms everywhere. Poverty is more than the lack of income and resources to ensure a sustainable livelihood. Its manifestations include hunger and malnutrition, limited access to education and other basic services, social discrimination and exclusion, as well as the lack of participation in decision-making. Economic growth must be inclusive to provide sustainable jobs and promote equality."
+                
             };
             c.Subs.Add(new SubCategory()
             {
@@ -107,6 +109,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Zero Hunger",
                 Num = 2,
+                ImageUrl = "images/ZeroHunger.png",
                 Text = "Achieve food security and improved nutrition and promote sustainable agriculture. Right now, our soils, freshwater, oceans, forests and biodiversity are being rapidly degraded. Climate change is putting even more pressure on the resources we depend on, increasing risks associated with disasters such as droughts and floods. Many rural women and men can no longer make ends meet on their land, forcing them to migrate to cities in search of opportunities. A profound change of the global food and agriculture system is needed if we are to nourish today’s 795 million hungry and the additional 2 billion people expected by 2050."
             };
 
@@ -182,6 +185,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Good Health and Well-Being",
                 Num = 3,
+                ImageUrl = "images/GoodHealth.png",
                 Text = "Ensure healthy lives and promote well-being for all at all ages, which is essential to sustainable development. Significant strides have been made in increasing life expectancy and reducing some of the common killers associated with child and maternal mortality. Major progress has been made on increasing access to clean water and sanitation, reducing malaria, tuberculosis, polio and the spread of HIV/AIDS. However, many more efforts are needed to fully eradicate a wide range of diseases and address many different persistent and emerging health issues."
             };
 
@@ -290,6 +294,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Quality Education",
                 Num = 4,
+                ImageUrl = "images/QualityEducation.png",
                 Text = "Ensure inclusive and quality education for all and promote lifelong learning. Obtaining a quality education is the foundation to improving people’s lives and sustainable development. Major progress has been made towards increasing access to education at all levels and increasing enrolment rates in schools particularly for women and girls. Basic literacy skills have improved tremendously, yet bolder efforts are needed to make even greater strides for achieving universal education goals. For example, the world has achieved equality in primary education between girls and boys, but few countries have achieved that target at all levels of education."
             };
 
@@ -371,6 +376,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Gender Equality",
                 Num = 5,
+                ImageUrl = "images/GenderEquality.png",
                 Text = "Achieve gender equality and empower all women and girls. Gender equality is not only a fundamental human right, but also a necessary foundation for a peaceful, prosperous, and sustainable world. Providing women and girls with equal access to education, health care, decent work, and representation in political and economic decision-making processes will fuel sustainable economies and benefit societies and humanity at large."
             };
 
@@ -445,6 +451,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Clean Water and Sanitation",
                 Num = 6,
+                ImageUrl = "images/CleanWater.png",
                 Text = "Ensure access to water and sanitation for all. Water scarcity, poor water quality and inadequate sanitation negatively impact food security, livelihood choices and educational opportunities for poor families across the world. Drought afflicts some of the world’s poorest countries, worsening hunger and malnutrition. By 2050, at least one in four people is likely to live in a country affected by chronic or recurring shortages of fresh water."
             };
 
@@ -512,6 +519,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Affordable and Clean Energy",
                 Num = 7,
+                ImageUrl = "images/Affordable.png",
                 Text = "Ensure access to affordable, reliable, sustainable, and modern energy for all. Energy is central to nearly every major challenge and opportunity the world faces today. Be it for jobs, security, climate change, food production or increasing incomes, access to energy for all is essential. Sustainable energy is opportunity – it transforms lives, economies, and the planet."
             };
 
@@ -558,6 +566,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Decent Work and Economic Growth",
                 Num = 8,
+                ImageUrl = "images/DecentWork.png",
                 Text = "Promote inclusive and sustainable economic growth, employment, and decent work for all. A continued lack of decent work opportunities, insufficient investments, and under-consumption, lead to an erosion of the basic social contract underlying democratic societies: that all must share in progress. The creation of quality jobs will remain a major challenge for almost all economies well beyond 2015." +
                         "Sustainable economic growth will require societies to create the conditions that allow people to have quality jobs that stimulate the economy while not harming the environment. Job opportunities and decent working conditions are also required for the whole working age population."
             };
@@ -654,6 +663,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Industry, Innovation, and Infrastructure",
                 Num = 9,
+                ImageUrl = "images/IndustryInnovation.png",
                 Text = "Build resilient infrastructure, promote sustainable industrialization, and foster innovation. Inclusive and sustainable industrial development is the primary source of income generation, allows for rapid and sustained increases in living standards for all people, and provides the technological solutions to environmentally sound industrialization. Technological progress is the foundation of efforts to achieve environmental objectives, such as increased resource and energy-efficiency. Without technology and innovation, industrialization will not happen, and without industrialization, development will not happen."
             };
 
@@ -722,6 +732,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Reduce Inequality",
                 Num = 10,
+                ImageUrl = "images/ReducedInequalities.png",
                 Text = "Reduce inequality within and among countries. While income inequality between countries may have been reduced, inequality within countries has risen. There is growing consensus that economic growth is not sufficient to reduce poverty if it is not inclusive and if it does not involve the three dimensions of sustainable development – economic, social, and environmental. To reduce inequality, policies should be universal in principle paying attention to the needs of disadvantaged and marginalized populations."
             };
 
@@ -803,6 +814,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Sustainable Cities and Communities",
                 Num = 11,
+                ImageUrl = "images/SustainableCities.png",
                 Text = "Make cities inclusive, safe, resilient, and sustainable. Many challenges exist to maintaining cities in a way that continues to create jobs and prosperity while not straining land and resources. Common urban challenges include congestion, lack of funds to provide basic services, a shortage of adequate housing and declining infrastructure. The challenges cities face can be overcome in ways that allow them to continue to thrive and grow, while improving resource use and reducing pollution and poverty. The future we want includes cities of opportunities for all, with access to basic services, energy, housing, transportation and more."
             };
 
@@ -884,6 +896,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Responsible Consumption and Production",
                 Num = 12,
+                ImageUrl = "images/SustainableCities.png",
                 Text = "Ensure sustainable consumption and production patterns. Sustainable consumption and production aims at “doing more and better with less,” increasing net welfare gains from economic activities by reducing resource use, degradation, and pollution along the whole lifecycle, while increasing quality of life. It involves different stakeholders, including business, consumers, policy makers, researchers, scientists, retailers, media, and development cooperation agencies, among others. It also requires a systemic approach and cooperation among actors operating in the supply chain, from producer to final consumer. It involves engaging consumers through awareness and education on sustainable consumption and lifestyles, providing consumers with adequate information through standards and labels, and engaging in sustainable public procurement, among others."
             };
 
@@ -971,6 +984,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Climate Action",
                 Num = 13,
+                ImageUrl = "images/ClimateAction.png",
                 Text = "Take urgent action to combat climate change and its impacts. People are experiencing the significant impacts of climate change, which include changing weather patterns, rising sea level, and more extreme weather events. The greenhouse gas emissions from human activities are driving climate change and continue to rise. They are now at their highest levels in history. Without action, the world’s average surface temperature is projected to rise over the 21st century and is likely to surpass 3 degrees Celsius this century—with some areas of the world expected to warm even more. The poorest and most vulnerable people are being affected the most. But climate change is a global challenge that does not respect national borders. Emissions anywhere affect people everywhere. It is an issue that requires solutions that need to be coordinated at the international level and it requires international cooperation to help developing countries move toward a low-carbon economy."
             };
 
@@ -1017,6 +1031,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Life Below Water",
                 Num = 14,
+                ImageUrl = "images/LifeBelowWater.png",
                 Text = "Conserve and sustainably use the oceans, seas, and marine resources. Our rainwater, drinking water, weather, climate, coastlines, much of our food, and even the oxygen in the air we breathe, are all ultimately provided and regulated by the sea. Throughout history, oceans and seas have been vital conduits for trade and transportation. Careful management of this essential global resource is a key feature of a sustainable future."
             };
 
@@ -1098,6 +1113,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Life on Land",
                 Num = 15,
+                ImageUrl = "images/LifeOnLand.png",
                 Text = "Sustainably manage forests, combat desertification, halt and reverse land degradation, halt biodiversity loss. Forests cover 30 percent of the Earth’s surface and, in addition to providing food security and shelter, forests are key to combating climate change, and protecting biodiversity and the homes of the indigenous population. Thirteen million hectares of forests are being lost every year while the persistent degradation of dry lands has led to the desertification of 3.6 billion hectares. Deforestation and desertification – caused by human activities and climate change – pose major challenges to sustainable development and have affected the lives and livelihoods of millions of people in the fight against poverty. Efforts are being made to manage forests and combat desertification."
             };
 
@@ -1193,6 +1209,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Peace Justice and Strong Institutions",
                 Num = 16,
+                ImageUrl = "images/PeaceAndJustice.png",
                 Text = "Promote just, peaceful and inclusive societies. Goal 16 of the Sustainable Development Goals is dedicated to the promotion of peaceful and inclusive societies for sustainable development, the provision of access to justice for all, and building effective, accountable institutions at all levels."
             };
 
@@ -1288,6 +1305,7 @@ namespace OwinSelfhostSample
             {
                 Name = "Partnership for the Goals",
                 Num = 17,
+                ImageUrl = "images/Partnerships.png",
                 Text = "Revitalize the global partnership for sustainable development. Urgent action is needed to mobilize, redirect and unlock the transformative power of trillions of dollars of private resources to deliver on sustainable development objectives. Long-term investments, including foreign direct investment, are needed in critical sectors, especially in developing countries. These include sustainable energy, infrastructure and transport, as well as information and communications technologies. Review and monitoring frameworks, regulations and incentive structures that enable such investments must be retooled to attract investments and reinforce sustainable development. "
             };
 
