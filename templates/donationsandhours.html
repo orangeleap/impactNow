@@ -1,3 +1,19 @@
 <div class="content-area">
     <h3>Donations and Volunteer Hours</h3>
+    <p>Not every organization has both volunteer hours and dollars. Please select the methods of aid most relevant to your organization before continuing.</p>
+    {{profile.receivesDonations}}
+    <ul>
+        <li>
+            <input type="checkbox" ng-model="profile.receivesDonations"/>
+            <p>My Organization Receives Charitable Donations</p>
+        </li>
+        <li>
+            <input type="checkbox" ng-model="profile.receivesVolunteerHours"/>
+            <p>My Organization Receives Volunteer Hours</p>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <hr />
+    <button class="btn pull-right" ng-disabled="!profile.receivesDonations && !profile.receivesVolunteerHours" ng-click="moveToNextStep()">Next Step</button>
 </div>

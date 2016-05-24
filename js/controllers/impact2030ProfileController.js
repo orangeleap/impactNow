@@ -6,28 +6,36 @@ angular.module('app').controller("impact2030ProfileController", [
                 currentStep: 0
             };
 
+            $scope.profile = {
+                receivesDonations: false,
+                receivesVolunteerHours: false
+            };
+            
+
             function init() {
-                var continueToGettingStarted = function (href) {
+                function continueToGettingStarted(href) {
                     $state.go(href);
                 };
 
-                var continueToDonationsAndHours = function (href) {
+                function continueToDonationsAndHours(href) {
                     $state.go(href);
                 };
 
-                var continueToImpactGoals = function (href) {
+                function continueToImpactGoals(href) {
+                    console.log($scope.profile.receivesDonations);
+                    console.log($scope.profile.receivesVolunteerHours);
                     $state.go(href);
                 };
 
-                var continueToImpactAllocation = function (href) {
+                function continueToImpactAllocation(href) {
                     $state.go(href);
                 };
 
-                var continueToFinalDetails = function (href) {
+                function continueToFinalDetails(href) {
                     $state.go(href);
                 };
 
-                var continueToConfirmation = function (href) {
+                function continueToConfirmation(href) {
                     $state.go(href);
                 };
 
