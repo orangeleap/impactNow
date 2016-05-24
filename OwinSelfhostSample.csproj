@@ -150,7 +150,9 @@
     <Content Include="js\controllers\impact2030ProfileController.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="js\services\sustainabilityDevelopmentGoalService.js" />
+    <Content Include="js\services\sustainabilityDevelopmentGoalService.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="templates\profile.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

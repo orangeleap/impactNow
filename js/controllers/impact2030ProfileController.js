@@ -1,7 +1,7 @@
 ﻿"use strict";
 angular.module('app').controller("impact2030ProfileController", [
-    "$scope", "$state",
-        function ($scope, $state) {
+    "$scope", "$state", "sustainabilityDevelopmentGoalService",
+        function ($scope, $state, sustainabilityDevelopmentGoalService) {
             $scope.currentStepPosition = {
                 currentStep: 0
             };
@@ -11,7 +11,16 @@ angular.module('app').controller("impact2030ProfileController", [
                 receivesDonations: false,
                 receivesVolunteerHours: false
             };
+
+            function getCategories() {
+                sustainabilityDevelopmentGoalService.getSDGs().
+                    then(function (response) {
+                        $scope.sdgs = response;
+                    });
+
+            };
             
+            getCategories();
 
             function init() {
                 function continueToGettingStarted(href) {
