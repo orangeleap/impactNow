@@ -71,7 +71,7 @@ angular.module('app').controller("impact2030ProfileController", [
 
                         modalInstance.result.then(function (selectedItem) {
                             var idx = $scope.profile.selectedSDGs.findIndex(function (s) {
-                                return s.num === sdg.num;
+                                return s.num === selectedItem.num;
                             });
 
                             if (idx > -1) {
