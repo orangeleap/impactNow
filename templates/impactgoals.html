@@ -26,6 +26,7 @@
     </div>
 </div>
 <div class="row">
-    <hr />
-    <button class="btn pull-right" ng-click="moveToNextStep()">Next Step</button>
+    <hr/>
+    <button class="btn pull-right" ng-click="moveToNextStep()" ng-disabled="profile.selectedSDGs.length === 0">Next Step</button>
 </div>
+

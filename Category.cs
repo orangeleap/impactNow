@@ -25,5 +25,6 @@ namespace OwinSelfhostSample
         public string Text { get; set; }
         public string HoverText { get; set; }
         public decimal Percentage { get; set; }
+        public bool Selected { get; set; }
     }
 }

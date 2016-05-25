@@ -1,7 +1,8 @@
 ﻿"use strict";
 angular.module('app').controller("impact2030ProfileController", [
-    "$scope", "$state", "sustainabilityDevelopmentGoalService",
-        function ($scope, $state, sustainabilityDevelopmentGoalService) {
+    "$scope", "$state", "sustainabilityDevelopmentGoalService", "$uibModal",
+        function ($scope, $state, sustainabilityDevelopmentGoalService, $uibModal) {
+
             $scope.currentStepPosition = {
                 currentStep: 0
             };
@@ -13,26 +14,6 @@ angular.module('app').controller("impact2030ProfileController", [
                 selectedSDGs: []
             };
 
-            $scope.formatSDG = function(sdg) {
-                return "#" + sdg.num + " " + sdg.name;
-            };
-
-            $scope.removeSelectedSDG = function(sdg) {
-                var idx = $scope.profile.selectedSDGs.findIndex(function(s) {
-                    return s.num === sdg.num;
-                });
-                $scope.profile.selectedSDGs.splice(idx, 1);
-            };
-
-            $scope.selectSDG = function(sdg) {
-                var foundSDG = $scope.profile.selectedSDGs.find(function(s) {
-                    return s.num === sdg.num;
-                });
-
-                if (!foundSDG) {
-                    $scope.profile.selectedSDGs.push(sdg);
-                }
-            };
 
             function getCategories() {
                 sustainabilityDevelopmentGoalService.getSDGs().
@@ -62,11 +43,72 @@ angular.module('app').controller("impact2030ProfileController", [
                 };
 
                 function continueToImpactGoals(href) {
-                    //sustainabilityDevelopmentGoalService.getSDGs().then(function(response) {
 
-                    //}, function(error) {
+                    $scope.open = function (sdg) {
+                        var modalInstance = $uibModal.open({
+                            animation: true,
+                            templateUrl: 'templates/sdgModal.html',
+                            controller: function ($scope, $uibModalInstance, displayedSdg) {
 
-                    //});
+                                $scope.formattedName = "#" + displayedSdg.num + " " + displayedSdg.name;
+                                $scope.displayedSdg = displayedSdg;
+
+                                $scope.ok = function () {
+                                    $uibModalInstance.close($scope.displayedSdg);
+                                };
+
+                                $scope.cancel = function () {
+                                    $uibModalInstance.dismiss('cancel');
+                                };
+                            },
+                            size: 'lg',
+                            resolve: {
+                                displayedSdg: function () {
+                                    return sdg;
+                                }
+                            }
+                        });
+
+                        modalInstance.result.then(function (selectedItem) {
+                            var idx = $scope.profile.selectedSDGs.findIndex(function (s) {
+                                return s.num === sdg.num;
+                            });
+
+                            if (idx > -1) {
+                                $scope.profile.selectedSDGs.splice(idx, 1, selectedItem);
+                            } else {
+                                $scope.profile.selectedSDGs.push(selectedItem);
+                            }
+                        }, function () {
+                        });
+                    };
+
+
+                    $scope.formatSDG = function (sdg) {
+                        return "#" + sdg.num + " " + sdg.name;
+                    };
+
+                    $scope.removeSelectedSDG = function (sdg) {
+                        var idx = $scope.profile.selectedSDGs.findIndex(function (s) {
+                            return s.num === sdg.num;
+                        });
+                        $scope.profile.selectedSDGs.splice(idx, 1);
+                        var foundSdg = $scope.sdgs.find(function(s) {
+                            return s.num === sdg.num;
+                        });
+
+                        if (foundSdg) {
+                            foundSdg.subs.forEach(function(sub, i) {
+                                sub['selected'] = false;
+                            });
+                        }
+
+                    };
+
+                    $scope.selectSDG = function (sdg) {
+
+                        $scope.open(sdg);
+                    };
                     $state.go(href);
                 };
 
