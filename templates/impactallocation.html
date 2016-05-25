@@ -1,7 +1,48 @@
 <div class="content-area">
     <h3>How involved in these areas are you?</h3>
 </div>
+
+<div class="row">
+    <div class="row">
+        <div class="col-xs-12 col-sm-push-6">
+            <div class="col-xs-12 col-sm-3" ng-if="profile.receivesDonations" align="center">
+                <h5> x % of 100%</h5>
+            </div>
+            <div class="col-xs-12 col-sm-3" ng-if="profile.receivesVolunteerHours" align="center">
+                <h5> x % of 100%</h5>
+            </div>
+        </div>
+    </div>
+    <ul class="media-list">
+        <li class="media" ng-repeat="sdg in profile.selectedSDGs">
+            <div class="col-xs-12 col-sm-2">
+                <div class="media-left media-middle">
+                    <img class="img-responsive"
+                         ng-src={{sdg.imageUrl}} alt={{sdg.name}}>
+                    </a>
+                </div>
+            </div>
+            <div class="media-body">
+                <div class="col-xs-12 col-sm-4">
+                    <h2 class="media-heading">
+                        {{formatSDG(sdg)}}<a href="" ng-click="removeSelectedSDG(sdg)"><span class="small">Remove</span></a>
+                    </h2>
+                    <!--<p>{{sdg.text}}</p>-->
+                </div>
+                <div class="col-xs-12 col-sm-3" ng-if="profile.receivesDonations">
+                    <input type="range" name="givingPercentage" min="0" max="100" ng-model="sdg.givingPercentage"><p>{{sdg.givingPercentage}} %</p>
+                </div>
+                <div class="col-xs-12 col-sm-3" ng-if="profile.receivesVolunteerHours">
+                    <input type="range" name="volunteerPercentage" min="0" max="100" ng-model="sdg.volunteerPercentage"><p>{{sdg.volunteerPercentage}} %</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
 <div class="row">
     <hr />
     <button class="btn pull-right" ng-click="moveToNextStep()">Next Step</button>
 </div>
+<i class="fa fa-times" aria-hidden="true"></i>
