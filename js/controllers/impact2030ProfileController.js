@@ -10,7 +10,9 @@ angular.module('app').controller("impact2030ProfileController", [
             $scope.profile = {
                 percentageComplete: 0,
                 receivesDonations: false,
+                givePercentage: 0,
                 receivesVolunteerHours: false,
+                volunteerPercentage: 0,
                 selectedSDGs: []
             };
 
@@ -113,6 +115,11 @@ angular.module('app').controller("impact2030ProfileController", [
                 };
 
                 function continueToImpactAllocation(href) {
+                    $scope.min = 0;
+                    $scope.max = 100;
+                    $scope.updateTotalPercentage = function ($event, value) {
+
+                    };
                     $state.go(href);
                 };
 

@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'ui.bootstrap'])
+angular.module('app', ['ui.router', 'ui.bootstrap', 'ui.bootstrap-slider'])
 
 // configuring our routes 
 // =============================================================================
