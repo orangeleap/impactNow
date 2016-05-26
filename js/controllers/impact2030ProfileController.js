@@ -35,6 +35,40 @@ angular.module('app').controller("impact2030ProfileController", [
             getCategories();
             getSponsors();
 
+            $scope.selectedProfile = {
+                hasVolunteering: true,
+                hasGiving: true,
+                category:
+                [
+                    {
+                        name : "Quality Education",
+                        num : 4,
+                        imageUrl : "images/QualityEducation.png",
+                        volunteerPercentage: 50,
+                        givePercentage: 75,
+                        subCategory: [
+                            { num: 1, text: "Ensure Quality Education", percentage: 25,maxLimit:40 },
+                            { num: 2, text: "Improve Quality of Early Childhood Development", percentage: 25, maxLimit: 100 },
+                            { num: 3, text: "Foster Equal Access to Education", percentage: 25, maxLimit: 100 },
+                            { num: 4, text: "Develop Employment Skills", percentage: 25, maxLimit: 100 }
+                        ]
+                    },
+                    {
+                        name: "Reduce Inequality",
+                        num: 10,
+                        imageUrl: "images/ReducedInequalities.png",
+                        volunteeringpercentage: 50,
+                        givePercentage: 25,
+                        subCategory: [
+                            { num: 1, text: "Sustain Income Growth", percentage: 25, maxLimit: 100 },
+                            { num: 2, text: "Empower Equality", percentage: 25, maxLimit: 100 },
+                            { num: 3, text: "Ensure Equal Opportunity", percentage: 25, maxLimit: 100 },
+                            { num: 4, text: "Promote Equality Policies", percentage: 25,maxLimit:100 }
+                        ]
+                    }
+                ]
+            };
+
             function init() {
                 function continueToGettingStarted(href) {
                     $state.go(href);
@@ -126,8 +160,6 @@ angular.module('app').controller("impact2030ProfileController", [
                 function continueToConfirmation(href) {
                     $state.go(href);
                 };
-
-                
 
                 $scope.stepDefinitions = [
                     {
