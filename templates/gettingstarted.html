@@ -1,39 +1,35 @@
-<style type="text/css">
-    ul#sponsors {
-        list-style-type: none;
-    }
-
-        ul#sponsors li {
-            display: inline;
-        }
-</style>
-<head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-</head>
 <div class="content-area">
-    <h3>What is Impact 2030?</h3>
-    <br />
+
+    <h2>What is Impact 2030?</h2>
+
     <div class="row">
         <div class="col-xs-8">
+            <p>
+                Impact 2030 is a collaboration between the private sector, United Nations, civil society, academia, and
+                philanthropic organization to end poverty, combat climate change and fight injustice and inequality by 2030. Each
+                Impact 2030 founding partner has commited to strategically aligningand mobilizing employee actions towards
+                one or more of the SDG's (Sustainable Development Goals).
+            </p>
+            <p>
+                By completing this profile, your organization will be contributing to the global fight to bring about sustainable
+                societal change and make a real difference. As more organizations become involved, we can produce reports to
+                show you a profile of your personal impact. This partnership between our corporate partners and your
+                organization is crucial to the success of this UN initiative and the improvement of the impact measurement.
+            </p>
 
-            <p>
-                Impact 2030 is a collaboration between the private sector, United Nations, civil society, academia, and <br />
-                philanthropic organization to end poverty, combat climate change and fight injustice and inequality by 2030. Each <br />Impact 2030 founding partner has commited to strategically aligningand mobilizing employee actions towards <br />one or more of the SDG's (Sustainable Development Goals).
-            </p>
-            <p>
-                By completing this profile, your organization will be contributing to the global fight to bring about sustainable <br />societal change and make a real difference. As more organizations become involved, we can produce reports to<br /> show you a profile of your personal impact. This partnership between our corporate partners and your <br />organization is crucial to the success of this UN initiative and the improvement of the impact measurement.
-            </p>
+            <h3>Corporate Sponsors</h3>
             <ul class="sponsors">
-                <div ng-repeat="sponsor in sponsorList track by $index">
-                    <li><img ng-src="{{sponsor.url}}" style="width: 100px; height: 100px; background: #e7e7e7;" href=""></li>
-                </div>
+                <li ng-repeat="sponsor in sponsorList track by $index"><img ng-src="{{sponsor.url}}" style="width: 100px; height: 100px; background: #e7e7e7;" href=""></li>
             </ul>
         </div>
+
         <div class="col-xs-4 text-right">
             <a href="http://www.impact2030.com/" target="_blank"><img class="impact2030" src="images/impact2030.png" alt="impact2030"></a>
         </div>
+
     </div>
+
+
 </div>
 
 
@@ -43,3 +39,7 @@
     <hr />
     <button class="btn pull-right" ng-click="moveToNextStep()">Next Step</button>
 </div>
+
+
+
+

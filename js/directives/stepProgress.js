@@ -28,7 +28,7 @@ angular.module("app").directive("stepProgress", function () {
     ];
 
     return {
-        templateUrl: "/templates/steps.html",
+        templateUrl: "templates/steps.html",
         scope: {
             stepDefinitions: "=",
             currentStepPosition: "=",

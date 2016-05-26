@@ -1,12 +1,12 @@
-﻿<div ng-repeat="cat in selectedProfile.category">
+﻿<div ng-repeat="cat in selectedProfile">
     <div class="col-xs3"><img ng-src="{{cat.imageUrl}}" alt="{{cat.name}}" /></div>
     <div class="col-xs-9">
         <div> #{{cat.num}} {{cat.name}}</div>
         <div><span>{{cat.givePercentage}}% of Your Giving</span><span>{{cat.volunteerPercentage}}% of Your Volunteering</span></div>
-        <div>Targets identified ({{cat.subCategory.length}})</div>
-        <div ng-repeat="subCat in cat.subCategory">
+        <div>Targets identified ({{cat.subs.length}})</div>
+        <div ng-repeat="subCat in cat.subs">
             <span class="col-xs-8">{{$index + 1}}. {{subCat.text}} - {{subCat.percentage}}%</span>
-            <span class="col-xs-4"><rzslider rz-slider-model="subCat.percentage" rz-slider-options="{floor:0,ceil:100,maxLimit:subCat.maxLimit,onChange:onChange(cat.num+'-'+subCat.num,subCat.percentage),onEnd:onEnd(cat.num+'-'+subCat.num,subCat.percentage)}"></rzslider></span>
+            <shared-slider model="subCat.percentage" total="subCat.percentage"></shared-slider>
             <div class="clearfix"></div>
         </div>
         <div>Edit Target Percentages</div>
