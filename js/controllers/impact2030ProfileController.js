@@ -51,6 +51,21 @@ angular.module('app').controller("impact2030ProfileController", [
                     $state.go(href);
                 };
 
+                function filterOutNoSelected(collection) {
+                    var result = new Array();
+
+                    for(var j = 0; j < collection.length; j++)
+                    {
+                        if(collection[j].selected)
+                        {
+                            result.push(collection[j]);
+                        }
+                    }
+
+                    return result;
+                };
+
+
                 function continueToImpactGoals(href) {
 
                     $scope.open = function (sdg) {
@@ -83,15 +98,17 @@ angular.module('app').controller("impact2030ProfileController", [
                                 return s.num === selectedItem.num;
                             });
 
+                            var selItem = selectedItem;
+                            selItem.subs = filterOutNoSelected(selectedItem.subs);
+
                             if (idx > -1) {
-                                $scope.profile.selectedSDGs.splice(idx, 1, selectedItem);
+                                $scope.profile.selectedSDGs.splice(idx, 1, selItem);
                             } else {
-                                $scope.profile.selectedSDGs.push(selectedItem);
+                                $scope.profile.selectedSDGs.push(selItem);
                             }
                         }, function () {
                         });
                     };
-
 
                     $scope.formatSDG = function (sdg) {
                         return "#" + sdg.num + " " + sdg.name;
@@ -179,6 +196,8 @@ angular.module('app').controller("impact2030ProfileController", [
                 };
 
             };
+            
+
 
             init();
         }
