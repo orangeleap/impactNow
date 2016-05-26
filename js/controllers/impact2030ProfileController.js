@@ -116,9 +116,15 @@ angular.module('app').controller("impact2030ProfileController", [
 
                 function continueToImpactAllocation(href) {
                     $scope.min = 0;
-                    $scope.max = 100;
-                    $scope.updateTotalPercentage = function ($event, value) {
-
+                    $scope.givingMax = 100;
+                    $scope.volunteerMax = 100;
+                    $scope.updateTotalGivePercentage = function ($event, value) {
+                        $scope.profile.givePercentage += value;
+                        //$scope.givingMax -= $scope.profile.givePercentage;
+                    };
+                    $scope.updateTotalVolunteerPercentage = function ($event, value) {
+                        $scope.profile.volunteerPercentage += value;
+                        //$scope.volunteerMax -= $scope.profile.givePercentage;
                     };
                     $state.go(href);
                 };
