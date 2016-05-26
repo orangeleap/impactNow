@@ -8,7 +8,7 @@ angular.module("app").directive("categoriesFinalDetails", function () {
 
     return {
         restrict: "E",
-        templateUrl: "/templates/categoriesFinalDetails.html",
+        templateUrl: "templates/categoriesFinalDetails.html",
         scope: {
             selectedProfile:"="
         },

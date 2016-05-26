@@ -16,6 +16,6 @@ angular.module("app").directive("sponsorList", function () {
             scope.sponsors = attrs.sponsors;
         },
         scope: { sponsors: "="},
-        templateUrl: "/templates/sponsors.html"
+        templateUrl: "templates/sponsors.html"
     };
 });
