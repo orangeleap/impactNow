@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  line-height: 1.5em;
 }
 
 body header {
@@ -18,10 +19,15 @@ body header a {
 	top: 25px;
 }
 
-body h1 {
+h1 {
 	font-size: 26px;
 }
-body h3 {
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
 	font-size: 18px;
 }
 
@@ -99,4 +105,53 @@ body h3 {
 
 .content-area {
     padding: 20px 0;
+}
+
+
+/* GETTING STARTED */
+
+.sponsors {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sponsors li {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.impact2030 {
+    max-width: 250px;
+}
+
+/* step 2 */
+
+.helpnote {
+    background: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #d7d7d7;
+}
+
+.lrg-checkbox {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 10px 5px 10px 0 !important;
+}
+
+/* step 3 */
+.sdg-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sdg-list li {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+}
+
+.sdg-list li img {
+    width: 175px;
+    height: 175px;
+    cursor: pointer;
 }

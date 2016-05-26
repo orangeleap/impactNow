@@ -20,13 +20,13 @@
     <div class="row">
         <ul>
             <li ng-repeat="sdg in sdgs">
-                <a ng-click="selectSDG(sdg)"><img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}"/></a>
+                <a ng-click="selectSDG(sdg)"><img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}" /></a>
             </li>
         </ul>
     </div>
 </div>
 <div class="row">
-    <hr/>
+    <hr />
     <button class="btn pull-right" ng-click="moveToNextStep()" ng-disabled="profile.selectedSDGs.length === 0">Next Step</button>
 </div>
 
