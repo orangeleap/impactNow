@@ -14,7 +14,7 @@ namespace ImpactNowWebApp.Controllers
         public HttpResponseMessage Get()
         {
             List<Sponsor> sponsors = new List<Sponsor>();
-            sponsors.Add(new Sponsor() { Name = "Chevron", Url = "images/chev_1.jpg", UrlAlt = "images/chev_2.jpg" });
+            sponsors.Add(new Sponsor() { Name = "Chevron", Url = "images/chevron.png", UrlAlt = "images/chevron_2.png" });
             sponsors.Add(new Sponsor() { Name = "NRG", Url = "images/nrg_1.jpg", UrlAlt = "images/nrg_2.jpg" });
             sponsors.Add(new Sponsor() { Name = "Ericsson", Url = "images/ericsson_1.jpg", UrlAlt = "images/ericsson_2.jpg" });
             sponsors.Add(new Sponsor() { Name = "Pfizer", Url = "images/pfizer_1.jpg", UrlAlt = "images/pfizer_2.jpg" });

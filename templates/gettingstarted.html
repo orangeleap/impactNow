@@ -24,7 +24,11 @@
             <p>
                 By completing this profile, your organization will be contributing to the global fight to bring about sustainable <br />societal change and make a real difference. As more organizations become involved, we can produce reports to<br /> show you a profile of your personal impact. This partnership between our corporate partners and your <br />organization is crucial to the success of this UN initiative and the improvement of the impact measurement.
             </p>
-            <sponsor-list useAlt="false"></sponsor-list>
+            <ul class="sponsors">
+                <div ng-repeat="sponsor in sponsorList track by $index">
+                    <li><img ng-src="{{sponsor.url}}" style="width: 100px; height: 100px; background: #e7e7e7;" href=""></li>
+                </div>
+            </ul>
         </div>
         <div class="col-xs-4 text-right">
             <a href="http://www.impact2030.com/" target="_blank"><img class="impact2030" src="images/impact2030.png" alt="impact2030"></a>

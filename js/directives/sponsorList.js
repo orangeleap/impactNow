@@ -4,6 +4,7 @@ angular.module("app").directive("sponsorList", function () {
         "$scope",
         function ($scope) {
             //wire up an interval, and change the filter range appropriately
+            
         }
     ];
 
@@ -12,10 +13,9 @@ angular.module("app").directive("sponsorList", function () {
         controller: controller,
         link: function (scope, element, attrs) {
             scope.useAlt = attrs.useAlt;
+            scope.sponsors = attrs.sponsors;
         },
-        scope: {
-            sponsors: "="
-        },
+        scope: { sponsors: "="},
         templateUrl: "/templates/sponsors.html"
     };
 });
