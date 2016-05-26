@@ -2,37 +2,33 @@
 <html>
 <head>
     <meta charset="utf-8">
-
     <!-- CSS -->
-    
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="style/style.css">
     <!-- JS -->
     <!-- load bootstrap, angular, nganimate, and ui-router -->
-    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"/>
-    <link href="ui-bootstrap-csp.css" rel="stylesheet" />
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link href="style/ui-bootstrap-csp.css" rel="stylesheet" />
     <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
-    <link href="ui-bootstrap-csp.css" rel="stylesheet"/>
+    <link href="style/ui-bootstrap-csp.css" rel="stylesheet" />
     <script src="js/ui-bootstrap.min.js"></script>
     <script src="js/ui-bootstrap-tpls.min.js"></script>
-    
+
     <script src="js/angular-ui-router.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
-    
 
     <script src="js/ui-bootstrap-tpls.js"></script>
-
     <script src="js/app.js"></script>
     <script src="js/services/sustainabilityDevelopmentGoalService.js"></script>
     <script src="js/controllers/impact2030ProfileController.js"></script>
     <script src="js/directives/stepProgress.js"></script>
     <script src="js/directives/sharedslider.js"></script>
-    
-</head>
+    <script src="js/directives/sponsorList.js"></script>
+    <script src="js/directives/categoriesFinalDetails.js"></script>
 
+</head>
 <!-- apply our angular app -->
 <body ng-app="app">
-
     <header>
         <div class="container">
             <div class="row">
@@ -41,19 +37,13 @@
             </div>
         </div>
     </header>
-
     <div class="container">
-
         <!-- views will be injected here -->
         <div ui-view></div>
-
     </div>
-
     <footer>
         <div class="container">
-
         </div>
     </footer>
-
 </body>
 </html>

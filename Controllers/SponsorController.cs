@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace OwinSelfhostSample
+namespace ImpactNowWebApp.Controllers
 {
     //accessed by: http://localhost:10281/api/sponsors
     public class SponsorsController : ApiController

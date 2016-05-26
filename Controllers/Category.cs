@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OwinSelfhostSample
+namespace ImpactNowWebApp.Controllers
 {
     public class Category
     {
@@ -11,8 +11,6 @@ namespace OwinSelfhostSample
         public int Num { get; set; }
         public string Text { get; set; }
         public string ImageUrl { get; set; }
-        public decimal VolunteerPercentage { get; set; }
-        public decimal GivePercentage  { get; set; }
         public List<SubCategory> Subs { get; set; }
 
         public Category()

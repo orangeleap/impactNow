@@ -30,6 +30,22 @@ angular.module("app").factory("sustainabilityDevelopmentGoalService", ["$http", 
                     result.reject(response);
                 });
             return result.promise;
+        },
+        postProfile: function (data) {
+            var result = $q.defer();
+            $http({
+                method: 'POST',
+                url: "api/profile",
+                data: data
+            })
+             .success(function (response) {
+                 result.resolve(response);
+             })
+                .error(function (response, status, headers, config) {
+
+                    result.reject(response);
+                });
+            return result.promise;
         }
     };
 }]);

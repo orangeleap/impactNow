@@ -31,6 +31,14 @@ angular.module('app').controller("impact2030ProfileController", [
                     });
             };
 
+            function postProfile(data) {
+                sustainabilityDevelopmentGoalService.postProfile(data).
+                    then(function (response) {
+                        //anything to do with the response?
+
+                    });
+            }
+
             
             getCategories();
             getSponsors();
@@ -158,6 +166,7 @@ angular.module('app').controller("impact2030ProfileController", [
                 };
 
                 function continueToConfirmation(href) {
+                    postProfile($scope.profile);
                     $state.go(href);
                 };
 
