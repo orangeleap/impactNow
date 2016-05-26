@@ -35,6 +35,36 @@ angular.module('app').controller("impact2030ProfileController", [
             getCategories();
             getSponsors();
 
+            $scope.selectedProfile = {
+                hasVolunteering: true,
+                hasGiving: true,
+                category:
+                [
+                    {
+                        num: 4,
+                        volunteeringpercentage: 50,
+                        givingPercentage: 75,
+                        subCategory: [
+                            { num: 1, percentage: 25 },
+                            { num: 2, percentage: 25 },
+                            { num: 3, percentage: 25 },
+                            { num: 4, percentage: 25 }
+                        ]
+                    },
+                    {
+                        num: 5,
+                        volunteeringpercentage: 50,
+                        givingPercentage: 25,
+                        subCategory: [
+                            { num: 1, percentage: 25 },
+                            { num: 2, percentage: 25 },
+                            { num: 3, percentage: 25 },
+                            { num: 4, percentage: 25 }
+                        ]
+                    }
+                ]
+            };
+
             function init() {
                 function continueToGettingStarted(href) {
                     $state.go(href);
@@ -130,8 +160,6 @@ angular.module('app').controller("impact2030ProfileController", [
                 function continueToConfirmation(href) {
                     $state.go(href);
                 };
-
-                
 
                 $scope.stepDefinitions = [
                     {
