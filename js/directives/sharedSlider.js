@@ -8,18 +8,18 @@
 
                     if ($scope.model > 100 - $scope.total)
                         $scope.model = 100 - $scope.total;
-                    console.log('model' + $scope.model);
+                    //console.log('model' + $scope.model);
 
                 };
                 
                 $scope.clearValue = function () {
                     $scope.total -= parseInt($scope.model);
-                    console.log('total ' + $scope.total);
+                    //console.log('total ' + $scope.total);
                 };
 
                 $scope.updateTotal = function() {
                     $scope.total += parseInt($scope.model);
-                    console.log('total ' + $scope.total);
+                    //console.log('total ' + $scope.total);
                 };
             }
         ];
