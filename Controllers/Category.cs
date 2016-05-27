@@ -14,7 +14,7 @@ namespace ImpactNowWebApp.Controllers
         public List<SubCategory> Subs { get; set; }
         public int GivePercentage { get; set; }
         public int VolunteerPercentage { get; set; }
-
+        public int TargetsTotalPercentage { get; set; }
         public Category()
         {
             Subs = new List<SubCategory>();
