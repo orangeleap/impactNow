@@ -13,7 +13,8 @@ angular.module('app').controller("impact2030ProfileController", [
                 givePercentage: 0,
                 receivesVolunteerHours: false,
                 volunteerPercentage: 0,
-                selectedSDGs: []
+                selectedSDGs: [],
+                selectedSDGsWithOutSelected: []
             };
 
 
@@ -65,6 +66,16 @@ angular.module('app').controller("impact2030ProfileController", [
                     return result;
                 };
 
+                function copy(o) {
+                    var output, v, key;
+                    output = Array.isArray(o) ? [] : {};
+                    for (key in o) {
+                        v = o[key];
+                        output[key] = (typeof v === "object") ? copy(v) : v;
+                    }
+                    return output;
+                }
+
 
                 function continueToImpactGoals(href) {
 
@@ -98,13 +109,13 @@ angular.module('app').controller("impact2030ProfileController", [
                                 return s.num === selectedItem.num;
                             });
 
-                            var selItem = selectedItem;
-                            selItem.subs = filterOutNoSelected(selectedItem.subs);
+                            //var selItem = selectedItem;
+                            //selItem.subs = filterOutNoSelected(selectedItem.subs);
 
                             if (idx > -1) {
-                                $scope.profile.selectedSDGs.splice(idx, 1, selItem);
+                                $scope.profile.selectedSDGs.splice(idx, 1, selectedItem);
                             } else {
-                                $scope.profile.selectedSDGs.push(selItem);
+                                $scope.profile.selectedSDGs.push(selectedItem);
                             }
                         }, function () {
                         });
@@ -139,7 +150,15 @@ angular.module('app').controller("impact2030ProfileController", [
                 };
 
                 function continueToImpactAllocation(href) {
+                    var selectedWithOut = copy($scope.profile.selectedSDGs);
+                    for (var i = 0; i < selectedWithOut.length; i++) {
 
+                        var selItem = selectedWithOut[i];
+                        selItem.subs = filterOutNoSelected(selItem.subs);
+
+                        $scope.profile.selectedSDGsWithOutSelected.push(selItem);
+                    }
+                    
                     $state.go(href);
                 };
 

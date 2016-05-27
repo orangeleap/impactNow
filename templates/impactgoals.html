@@ -12,7 +12,7 @@
 
 
     <!-- TO-DO - Add NG-IF to this row to hide if no SDGs have been selected yet-->
-    <div class="row">
+    <div class="row" ng-show="profile.selectedSDGs.length > 0">
         <div class="col-sm-12 col-md-6">
             <div class="selected-sdgs">
                 <h4>You Have Selected the Following SDG's</h4>

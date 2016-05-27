@@ -566,7 +566,7 @@ namespace ImpactNowWebApp.Controllers
             {
                 Name = "Decent Work and Economic Growth",
                 Num = 8,
-                ImageUrl = "images/DecentWork.png",
+                ImageUrl = "images/DecentWork.jpeg",
                 Text = "Promote inclusive and sustainable economic growth, employment, and decent work for all. A continued lack of decent work opportunities, insufficient investments, and under-consumption, lead to an erosion of the basic social contract underlying democratic societies: that all must share in progress. The creation of quality jobs will remain a major challenge for almost all economies well beyond 2015." +
                         "Sustainable economic growth will require societies to create the conditions that allow people to have quality jobs that stimulate the economy while not harming the environment. Job opportunities and decent working conditions are also required for the whole working age population."
             };
