@@ -2,16 +2,12 @@
     <h2>Review Your Impact Areas</h2>
     <p>Some text goes here</p>
 
-    <categories-final-details selected-profile="profile.selectedSDGs"></categories-final-details>
+    <categories-final-details selected-profile="profile.selectedSDGsWithOutSelected"></categories-final-details>
 </div>
-
-
-
-
 
 <div class="row">
     <div class="col-sm-12">
         <hr />
-        <button class="btn pull-right" ng-click="moveToNextStep()">Confirm and Finish</button>
+        <button class="btn pull-right" ng-disabled="validateFinalDetails()" ng-click="moveToNextStep()">Confirm and Finish</button>
     </div>
 </div>

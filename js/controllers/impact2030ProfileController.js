@@ -163,6 +163,18 @@ angular.module('app').controller("impact2030ProfileController", [
                 };
 
                 function continueToFinalDetails(href) {
+                    
+                    $scope.validateFinalDetails = function () {
+                        var isInValid = false;
+                        $scope.profile.selectedSDGsWithOutSelected.forEach(function (sdg, i) {
+                            if (sdg.targetsTotalPercentage < 100) {
+                                isInValid = true;
+                            }
+                        });
+
+                        return isInValid;
+                    };
+
                     $state.go(href);
                 };
 
