@@ -2,21 +2,23 @@
     <h3>Select Your Impact Goals</h3>
     <div class="row">
         <div class="col-xs-12">
-            <span>
-                Browse the Impact Goals below and select those that are relevant to your Organization's wrok. In order to add a <br>
-                Goal to your profile, you need to select all the sub-targets ("categories") that apply to the work you do. Once you <br>
-                have selected your goals, you can proceed to the next step where you will tell us how invloved you are in each area. <br><br>
-            </span><br><br>
+            <p>
+                Browse the Impact Goals below and select those that are relevant to your Organization's work. In order to add a
+                Goal to your profile, you need to select all the sub-targets ("categories") that apply to the work you do. Once you
+                have selected your goals, you can proceed to the next step where you will tell us how invloved you are in each area.
+            </p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <h4>Your Have Selected the Following SDG's</h4>
-            <ul>
-                <li ng-repeat="sdg in profile.selectedSDGs">
-                    {{formatSDG(sdg)}}<a href="" ng-click="removeSelectedSDG(sdg)">Remove</a>
-                </li>
-            </ul>
+    <div class="row" ng-if="profile.selectedSDGs">
+        <div class="col-sm-12 col-md-6">
+            <div class="selected-sdgs">
+                <h4>You Have Selected the Following SDG's</h4>
+                <ul>
+                    <li ng-repeat="sdg in profile.selectedSDGs">
+                        <span>{{formatSDG(sdg)}}</span><a href="" ng-click="removeSelectedSDG(sdg)">Remove</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -29,8 +31,13 @@
         </div>
     </div>
 </div>
+
+
+
 <div class="row">
-    <hr />
-    <button class="btn pull-right" ng-click="moveToNextStep()" ng-disabled="profile.selectedSDGs.length === 0">Next Step</button>
+    <div class="col-sm-12">
+        <hr />
+        <button class="btn pull-right" ng-click="moveToNextStep()" ng-disabled="profile.selectedSDGs.length === 0">Next Step</button>
+    </div>
 </div>
 
