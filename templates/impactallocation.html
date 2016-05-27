@@ -45,12 +45,12 @@
                     <div class="col-sm-6">
 
                         <div class="media-body">
-                            <div class="col-xs-12 col-sm-3" ng-show="profile.receivesDonations">
+                            <div class="col-xs-12 col-sm-6" ng-show="profile.receivesDonations">
                                 <p>{{sdg.givePercentage}} %</p>
                                 <!--<slider ng-model="sdg.givePercentage" min="min" max="60" on-stop-slide="updateTotalGivePercentage($event, value)"></slider>-->
                                 <shared-slider model="sdg.givePercentage" total="profile.givePercentage"></shared-slider>
                             </div>
-                            <div class="col-xs-12 col-sm-3" ng-show="profile.receivesVolunteerHours">
+                            <div class="col-xs-12 col-sm-6" ng-show="profile.receivesVolunteerHours">
                                 <p>{{sdg.volunteerPercentage}} %</p>
                                 <!--<slider ng-model="sdg.volunteerPercentage" min="min" max="30" on-slide="slide(value)" on-stop-slide="updateTotalVolunteerPercentage($event, value)"></slider>-->
                                 <shared-slider model="sdg.volunteerPercentage" total="profile.volunteerPercentage"></shared-slider>
