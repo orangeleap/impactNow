@@ -207,6 +207,9 @@ ul {
     border: 0;
 }
 
+
+/* step 4 */
+
 .gray-box {
     background: #f7f7f7;
     border: 1px solid #e7e7e7;
@@ -215,4 +218,9 @@ ul {
 
 .gray-box h2 {
     margin-top: 10px;
+}
+
+.selected-list {
+    padding: 35px 0px 30px;
+    border-top: 1px solid #e7e7e7;
 }

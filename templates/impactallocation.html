@@ -8,7 +8,7 @@
                 <div class="gray-box">
                     <h2 text-align="center"> {{profile.givePercentage}}%</h2>
                     <h4 text-align="center"> Allocated for Giving</h4>
-                </div> 
+                </div>
             </div>
             <div class="col-xs-12 col-sm-6" ng-show="profile.receivesVolunteerHours" align="center">
                 <div class="gray-box">
@@ -22,34 +22,44 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="media-list">
-                <li class="media" ng-repeat="sdg in profile.selectedSDGs">
-                    <div class="col-xs-12 col-sm-2">
-                        <div class="media-left media-middle">
-                            <img class="img-responsive"
-                                 ng-src={{sdg.imageUrl}} alt={{sdg.name}} />
+                <li class="media selected-list" ng-repeat="sdg in profile.selectedSDGs">
 
+                    <div class="col-sm-6">
+
+                        <div class="col-sm-3">
+                            <div class="media-left media-middle">
+                                <img class="img-responsive"
+                                     ng-src={{sdg.imageUrl}} alt={{sdg.name}} />
+                            </div>
                         </div>
-                    </div>
-                    <div class="media-body">
-                        <div class="col-xs-12 col-sm-4">
+
+                        <div class="col-sm-9">
                             <h2 class="media-heading">
-                                {{formatSDG(sdg)}}<a href="" ng-click="removeSelectedSDG(sdg)"><span class="small">Remove</span></a>
+                                {{formatSDG(sdg)}} <a href="" ng-click="removeSelectedSDG(sdg)"><span class="small">Remove</span></a>
                             </h2>
                             <!--<p>{{sdg.text}}</p>-->
-                            </di
                         </div>
-                        <div class="col-xs-12 col-sm-3" ng-show="profile.receivesDonations">
-                            <p>{{sdg.givePercentage}} %</p>
-                            <!--<slider ng-model="sdg.givePercentage" min="min" max="60" on-stop-slide="updateTotalGivePercentage($event, value)"></slider>-->
-                            <shared-slider model="sdg.givePercentage" total="profile.givePercentage"></shared-slider>
 
-                        </div>
-                        <div class="col-xs-12 col-sm-3" ng-show="profile.receivesVolunteerHours">
-                            <p>{{sdg.volunteerPercentage}} %</p>
-                            <!--<slider ng-model="sdg.volunteerPercentage" min="min" max="30" on-slide="slide(value)" on-stop-slide="updateTotalVolunteerPercentage($event, value)"></slider>-->
-                            <shared-slider model="sdg.volunteerPercentage" total="profile.volunteerPercentage"></shared-slider>
-                        </div>
                     </div>
+
+                    <div class="col-sm-6">
+
+                        <div class="media-body">
+                            <div class="col-xs-12 col-sm-3" ng-show="profile.receivesDonations">
+                                <p>{{sdg.givePercentage}} %</p>
+                                <!--<slider ng-model="sdg.givePercentage" min="min" max="60" on-stop-slide="updateTotalGivePercentage($event, value)"></slider>-->
+                                <shared-slider model="sdg.givePercentage" total="profile.givePercentage"></shared-slider>
+                            </div>
+                            <div class="col-xs-12 col-sm-3" ng-show="profile.receivesVolunteerHours">
+                                <p>{{sdg.volunteerPercentage}} %</p>
+                                <!--<slider ng-model="sdg.volunteerPercentage" min="min" max="30" on-slide="slide(value)" on-stop-slide="updateTotalVolunteerPercentage($event, value)"></slider>-->
+                                <shared-slider model="sdg.volunteerPercentage" total="profile.volunteerPercentage"></shared-slider>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </li>
             </ul>
         </div>
