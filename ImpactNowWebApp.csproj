@@ -203,6 +203,7 @@
     <Content Include="templates\gettingstarted.html" />
     <Content Include="templates\impactallocation.html" />
     <Content Include="templates\impactgoals.html" />
+    <Content Include="templates\impactprofile.html" />
     <Content Include="templates\profile.html" />
     <Content Include="templates\sdgModal.html" />
     <Content Include="templates\sponsors.html" />

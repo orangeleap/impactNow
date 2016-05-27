@@ -1,0 +1,70 @@
+﻿<div class="content-area">
+    <div class="row">
+        <img id="profilecomplete" src="" height="" width="">
+    </div>
+    <div class="row">
+        <h3>Your Impact Profile</h3>
+        <span>
+            Based on our CSRConnect data, here is how you compare with other charities in our network.
+            <a class="pull-right" href="">Export detailed profile</a>
+        </span><br />
+        <div ng-repeat="sdg in sdgs">
+            <div class="col-md-3">
+                <img src="sdg.imgUrl" id="" />
+            </div>
+            <div class="col-md-9">
+                //progress bars go here //
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Charities that share your sustainable development goals</h3>
+        <ul class="likecharities" ng-repeat="likecharity in likecharities">
+            <img src="likecarity.imgUrl">
+        </ul>
+    </div>
+    <div class="row">
+        <h3>Share Impact 2030?</h3>
+        <span>
+            Help us spread the word about this initiative. <br />
+            <img id="twitter" href="" src="" />
+            <img id="facedbook" href="" src="" />
+            <img id="linkedin" href="" src="" />
+            <img id="instagram" href="" src="" />
+        </span><br /><br />
+    </div>
+    <div class="row">
+        <span>
+            Add your social handle and we will feature your <br />
+            organization in upcoming awareness campaigns.
+        </span>
+        <div class="col-md-8 form-group">
+            <div class="select-wrap">
+                <select class="form-control" placeholder="Twitter"></select>
+            </div>
+            <input type="textbox" />
+            <a href="">Save</a>
+        </div>
+    </div>
+    <br /><br /><br />
+    <div class="row">
+        <h3>What's next? </h3>
+        <span>
+            Thank you for being one of the first organizations to fill out an Impact Profile! As we <br />
+            continue our plan for Impact 2030, your impact profile will evolve to show the <br />
+            relationship between your contributions and the Sustainable Development Goals. We <br />
+            plan to share updates with all impact charities as new features are made available. <br /> <br />
+        </span>
+        <span>
+            You can now proceed to your account and access your information.
+        </span>
+    </div>
+</div>
+<div class="row">
+    <hr />
+    <button class="btn" ng-click="toNPO()">Continue to NPO Portal</button><br />
+    <a href=""> I need to make changes, Go Back </a>
+
+</div>
+
