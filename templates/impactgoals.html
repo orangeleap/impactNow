@@ -10,19 +10,23 @@
         </div>
     </div>
     <div class="row">
-        <h4>Your Have Selected the Following SDG's</h4>
-        <ul>
-            <li ng-repeat="sdg in profile.selectedSDGs">
-                {{formatSDG(sdg)}}<a href="" ng-click="removeSelectedSDG(sdg)">Remove</a>
-            </li>
-        </ul>
+        <div class="col-sm-12">
+            <h4>Your Have Selected the Following SDG's</h4>
+            <ul>
+                <li ng-repeat="sdg in profile.selectedSDGs">
+                    {{formatSDG(sdg)}}<a href="" ng-click="removeSelectedSDG(sdg)">Remove</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="row">
-        <ul class="sdg-list">
-            <li ng-repeat="sdg in sdgs">
-                <a ng-click="selectSDG(sdg)"><img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}" /></a>
-            </li>
-        </ul>
+        <div class="col-sm-12">
+            <ul class="sdg-list">
+                <li ng-repeat="sdg in sdgs">
+                    <a ng-click="selectSDG(sdg)"><img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}" /></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="row">
