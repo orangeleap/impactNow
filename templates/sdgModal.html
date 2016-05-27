@@ -1,17 +1,18 @@
-﻿
-<div class="modal-header">
-    <h3 class="modal-title">{{formattedName}}</h3>
-</div>
-<div class="modal-body">
-    {{displayedSdg.text}}
-    <b>To add this area, select all the targets below that are relevant to your work.</b> <a href="">What are Targets?</a>
-    <ul>
-        <li ng-repeat="s in displayedSdg.subs">
-            <input type="checkbox" ng-model="s.selected"/> {{s.num}}.{{s.text}}
-        </li>
-    </ul>
-</div>
-<div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+﻿<div class="sdg-modal">
+    <div class="modal-header">
+        <h3 class="modal-title">{{formattedName}}</h3>
+    </div>
+    <div class="modal-body">
+        <p>{{displayedSdg.text}}</p>
+        <p><b>To add this area, select all the targets below that are relevant to your work.</b> <a href="">What are Targets?</a></p>
+        <ul>
+            <li ng-repeat="s in displayedSdg.subs">
+                <input type="checkbox" ng-model="s.selected" /> {{s.num}}.{{s.text}}
+            </li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
 </div>
