@@ -130,6 +130,9 @@ angular.module('app').controller("impact2030ProfileController", [
                             return s.num === sdg.num;
                         });
                         $scope.profile.selectedSDGs.splice(idx, 1);
+                        if ($scope.profile.selectedSDGsWithOutSelected.length > 0) {
+                            $scope.profile.selectedSDGsWithOutSelected.splice(idx, 1);
+                        };
                         var foundSdg = $scope.sdgs.find(function(s) {
                             return s.num === sdg.num;
                         });
@@ -157,8 +160,21 @@ angular.module('app').controller("impact2030ProfileController", [
                         selItem.subs = filterOutNoSelected(selItem.subs);
 
                         $scope.profile.selectedSDGsWithOutSelected.push(selItem);
-                    }
-                    
+                    };
+                    if ($scope.profile.selectedSDGsWithOutSelected) {
+                        if ($scope.profile.selectedSDGsWithOutSelected.length == 1) {
+
+                            if ($scope.profile.receivesDonations) {
+                                $scope.profile.givePercentage = 100;
+                                $scope.profile.selectedSDGsWithOutSelected[0].givePercentage = 100;
+                            };
+                            if ($scope.profile.receivesVolunteerHours) {
+                                $scope.profile.volunteerPercentage = 100;
+                                $scope.profile.selectedSDGsWithOutSelected[0].volunteerPercentage = 100;
+                            };
+                        };
+                    };
+
                     $state.go(href);
                 };
 

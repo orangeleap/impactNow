@@ -1,7 +1,9 @@
 <div class="content-area">
     <h2>How involved in these areas are you?</h2>
-    <p>Some paragraph goes here</p>
-
+    <p>Use the sliders below to show how donations and/or volunteering efforts are divided amongst the Impact Goals you selected on the previous page. When allocating your percentages, make your best guess. This is used as an estimate for reporting purposes. </p>
+    <p ng-show="profile.selectedSDGsWithOutSelected.length == 1">
+        Since you only have 1 SDG, we have preallocated with 100%.
+    </p>
     <div class="row">
         <div class="col-sm-offset-6 col-sm-6">
             <div class="col-xs-12 col-sm-6" ng-show="profile.receivesDonations" align="center">
@@ -22,7 +24,7 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="media-list">
-                <li class="media selected-list" ng-repeat="sdg in profile.selectedSDGs">
+                <li class="media selected-list" ng-repeat="sdg in profile.selectedSDGsWithOutSelected">
 
                     <div class="col-sm-6">
 

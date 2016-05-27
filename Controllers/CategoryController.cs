@@ -896,7 +896,7 @@ namespace ImpactNowWebApp.Controllers
             {
                 Name = "Responsible Consumption and Production",
                 Num = 12,
-                ImageUrl = "images/SustainableCities.png",
+                ImageUrl = "images/Responsible.png",
                 Text = "Ensure sustainable consumption and production patterns. Sustainable consumption and production aims at “doing more and better with less,” increasing net welfare gains from economic activities by reducing resource use, degradation, and pollution along the whole lifecycle, while increasing quality of life. It involves different stakeholders, including business, consumers, policy makers, researchers, scientists, retailers, media, and development cooperation agencies, among others. It also requires a systemic approach and cooperation among actors operating in the supply chain, from producer to final consumer. It involves engaging consumers through awareness and education on sustainable consumption and lifestyles, providing consumers with adequate information through standards and labels, and engaging in sustainable public procurement, among others."
             };
 
