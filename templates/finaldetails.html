@@ -1,17 +1,13 @@
 <div class="content-area">
     <h2>Review Your Impact Areas</h2>
-    <p>Some text goes here</p>
-
-    <categories-final-details selected-profile="profile.selectedSDGs"></categories-final-details>
+    <p>Below are the areas and targets you have selected. Your percentages are set and we have evenly divided your efforts across the targets you selected. If you wish, you can edit these percentages to better reflect your efforts.</p>
+    <hr />
+    <categories-final-details selected-profile="profile.selectedSDGsWithOutSelected"></categories-final-details>
 </div>
-
-
-
-
 
 <div class="row">
     <div class="col-sm-12">
         <hr />
-        <button class="btn pull-right" ng-click="moveToNextStep()">Confirm and Finish</button>
+        <button class="btn pull-right" ng-disabled="validateFinalDetails()" ng-click="moveToNextStep()">Confirm and Finish</button>
     </div>
 </div>

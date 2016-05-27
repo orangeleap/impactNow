@@ -16,7 +16,8 @@
             </div>
             <div class="col-xs-3">
                 <h2> {{cat.targetsTotalPercentage}} of 100%</h2>
-                Allocated for Targets
+                <div>Allocated for Targets</div>
+                <div ng-show="cat.targetsTotalPercentage<100">Allocate 100% to Confirm</div>
             </div>
         </div>
         <div class="clearfix"></div>
