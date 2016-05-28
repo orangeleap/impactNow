@@ -16,14 +16,15 @@
                 show you a profile of your personal impact. This partnership between our corporate partners and your
                 organization is crucial to the success of this UN initiative and the improvement of the impact measurement.
             </p>
-
-            <h3>Corporate Sponsors</h3>
+            <br />
+            <br />
+            <h4>Corporate Sponsors</h4>
             <ul class="sponsors">
                 <li ng-repeat="sponsor in sponsorList track by $index"><img ng-src="{{sponsor.url}}"></li>
             </ul>
         </div>
 
-        <div class="col-xs-4 text-right">
+        <div class="col-xs-4 text-center">
             <a href="http://www.impact2030.com/" target="_blank"><img class="impact2030" src="images/impact2030.png" alt="impact2030"></a>
             <iframe class="youtube-iframe" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -39,7 +40,7 @@
 <div class="row">
     <div class="col-sm-12">
         <hr />
-        <button class="btn pull-right" ng-click="moveToNextStep()">Next Step</button>
+        <button class="btn btn-primary pull-right" ng-click="moveToNextStep()">Next Step</button>
     </div>
 </div>
 

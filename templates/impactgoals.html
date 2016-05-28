@@ -1,21 +1,22 @@
 <div class="content-area">
     <h3>Select Your Impact Goals</h3>
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-md-6">
             <p>
                 Browse the Impact Goals below and select those that are relevant to your Organization's work. In order to add a
                 Goal to your profile, you need to select all the sub-targets ("categories") that apply to the work you do. Once you
                 have selected your goals, you can proceed to the next step where you will tell us how invloved you are in each area.
+                <br />
             </p>
+
         </div>
     </div>
 
 
-    <!-- TO-DO - Add NG-IF to this row to hide if no SDGs have been selected yet-->
     <div class="row" ng-show="profile.selectedSDGs.length > 0">
         <div class="col-sm-12 col-md-6">
             <div class="selected-sdgs">
-                <h4>You Have Selected the Following SDG's</h4>
+                <h4>You Have Selected the Following <b>{{profile.selectedSDGs.length}}</b> SDG<span ng-if="profile.selectedSDGs.length > 1">s</span></h4>
                 <ul>
                     <li ng-repeat="sdg in profile.selectedSDGs">
                         <span>{{formatSDG(sdg)}}</span><a href="" ng-click="removeSelectedSDG(sdg)">Remove</a>
@@ -29,6 +30,7 @@
 
     <div class="row">
         <div class="col-sm-12">
+            <hr />
             <ul class="sdg-list">
                 <li ng-repeat="sdg in sdgs">
                     <a ng-click="selectSDG(sdg)"><img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}" /></a>
@@ -43,7 +45,7 @@
 <div class="row">
     <div class="col-sm-12">
         <hr />
-        <button class="btn pull-right" ng-click="moveToNextStep()" ng-disabled="profile.selectedSDGs.length === 0">Next Step</button>
+        <button class="btn btn-primary pull-right" ng-click="moveToNextStep()" ng-disabled="profile.selectedSDGs.length === 0">Next Step</button>
     </div>
 </div>
 
