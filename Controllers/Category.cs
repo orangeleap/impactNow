@@ -11,6 +11,8 @@ namespace ImpactNowWebApp.Controllers
         public int Num { get; set; }
         public string Text { get; set; }
         public string ImageUrl { get; set; }
+        public string Color { get; set; }
+        public string Hover { get; set; }
         public List<SubCategory> Subs { get; set; }
         public int GivePercentage { get; set; }
         public int VolunteerPercentage { get; set; }

@@ -203,6 +203,35 @@ ul {
 .sdg-list li {
     display: inline-block;
     margin: 0 20px 20px 0;
+    overflow: hidden;
+    width: 175px;
+    height: 175px;
+}
+
+.sdg-list li a {
+    display: inline-block;
+    height:175px;
+    width: 175px;
+    background-size: cover;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.sdg-list li a span {
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    visibility: hidden;
+    display: block;
+}
+
+.sdg-list li a:hover span {
+    visibility: visible;
+}
+
+.sdg-list li a:hover {
+    background-image: none !important;
+    text-decoration: none;
 }
 
 .sdg-list li img {

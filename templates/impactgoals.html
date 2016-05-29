@@ -33,7 +33,11 @@
             <hr />
             <ul class="sdg-list">
                 <li ng-repeat="sdg in sdgs">
-                    <a ng-click="selectSDG(sdg)"><img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}" /></a>
+                    <a ng-click="selectSDG(sdg)" style="background-image:url({{sdg.imageUrl}}); background-color:{{sdg.color}};">
+                        <!--<img ng-src="{{sdg.imageUrl}}" alt="{{sdg.name}}" />-->
+                        <span>{{sdg.hover}}</span>
+                    </a>
+
                 </li>
             </ul>
         </div>
