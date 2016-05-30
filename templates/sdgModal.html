@@ -1,9 +1,16 @@
 ﻿<div class="sdg-modal">
+
     <div class="modal-header">
-        <h3 class="modal-title">{{formattedName}}</h3>
+        <div class="col-sm-3">
+            <img ng-src="{{displayedSdg.imageUrl}}" alt="{{displayedSdg.name}}" class="img-responsive" />
+        </div>
+        <div class="col-sm-9">
+            <h3 class="modal-title">{{formattedName}}</h3>
+            <p>{{displayedSdg.text}}</p>
+        </div>
     </div>
     <div class="modal-body">
-        <p>{{displayedSdg.text}}</p>
+        
         <p><b>To add this area, select all the targets below that are relevant to your work.</b> <a href="">What are Targets?</a></p>
         <ul>
             <li ng-repeat="s in displayedSdg.subs">
