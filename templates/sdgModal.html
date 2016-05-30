@@ -11,7 +11,7 @@
     </div>
     <div class="modal-body">
         
-        <p><b>To add this area, select all the targets below that are relevant to your work.</b> <a href="">What are Targets?</a></p>
+        <p><b>To add this area, select all the targets below that are relevant to your work.</b> <!--<a href="">What are Targets?</a>--></p>
         <ul>
             <li ng-repeat="s in displayedSdg.subs">
                 <input type="checkbox" ng-model="s.selected" /><span>{{s.num}}. {{s.text}}</span>
@@ -19,7 +19,7 @@
         </ul>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-primary" type="button" ng-click="ok()">Save Targets</button>
         <button class="btn btn-cancel" type="button" ng-click="cancel()">Cancel</button>
     </div>
 </div>

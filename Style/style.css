@@ -11,7 +11,8 @@ body header {
 
 body header img {
 	position: relative;
-  top: 18px;
+    top: 10px;
+    height: 50px;
 }
 
 body header a {
