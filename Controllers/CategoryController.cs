@@ -1142,7 +1142,7 @@ namespace ImpactNowWebApp.Controllers
                 Num = 15,
                 ImageUrl = "images/LifeOnLand.png",
                 Color = "#5CB84D",
-                Hover = "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+                Hover = "Protect, restore, and promote terrestrial ecosystems. Combat, halt, and reverse desertification and biodiversity loss",
                 Text = "Sustainably manage forests, combat desertification, halt and reverse land degradation, halt biodiversity loss. Forests cover 30 percent of the Earth’s surface and, in addition to providing food security and shelter, forests are key to combating climate change, and protecting biodiversity and the homes of the indigenous population. Thirteen million hectares of forests are being lost every year while the persistent degradation of dry lands has led to the desertification of 3.6 billion hectares. Deforestation and desertification – caused by human activities and climate change – pose major challenges to sustainable development and have affected the lives and livelihoods of millions of people in the fight against poverty. Efforts are being made to manage forests and combat desertification."
             };
 
@@ -1240,7 +1240,7 @@ namespace ImpactNowWebApp.Controllers
                 Num = 16,
                 ImageUrl = "images/PeaceAndJustice.png",
                 Color = "#00689D",
-                Hover = "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
+                Hover = "Promote peaceful and inclusive societies for sustainable development,  and provide access to justice for all and build effective",
                 Text = "Promote just, peaceful and inclusive societies. Goal 16 of the Sustainable Development Goals is dedicated to the promotion of peaceful and inclusive societies for sustainable development, the provision of access to justice for all, and building effective, accountable institutions at all levels."
             };
 
