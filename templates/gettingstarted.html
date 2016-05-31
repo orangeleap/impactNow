@@ -1,4 +1,26 @@
-<div class="content-area">
+<div class="content-area" data>
+    <div id="openingModal" class="modal show" role="dialog" ng-show="!hideModal">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="hideModal = true">&times;</button>
+                    <h4 class="modal-title">Impact Now</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        We have launched ImpactNOW, our tool to support the United Nation`s Impact2030 initiative and we need you to be involved. 
+                        Once you have completed your profile you will be taken back to the NPO Portal.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="hideModal = true">Get Started</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <h2>What is Impact 2030?</h2>
 

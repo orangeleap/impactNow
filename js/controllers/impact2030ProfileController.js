@@ -2,7 +2,7 @@
 angular.module('app').controller("impact2030ProfileController", [
     "$scope", "$state", "sustainabilityDevelopmentGoalService", "$uibModal",
         function ($scope, $state, sustainabilityDevelopmentGoalService, $uibModal) {
-
+            $scope.hideModal = false;
             $scope.currentStepPosition = {
                 currentStep: 0
             };
@@ -44,6 +44,8 @@ angular.module('app').controller("impact2030ProfileController", [
             getSponsors();
 
             function init() {
+                
+
                 function continueToGettingStarted(href) {
                     $state.go(href);
                 };
