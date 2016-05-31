@@ -15,7 +15,7 @@ body header img {
     height: 50px;
 }
 
-body header a {
+.header-link {
 	position: relative;
 	top: 25px;
 }
